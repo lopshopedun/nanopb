@@ -9,7 +9,7 @@
  * a communication and filesystem layer.
  */
 
-#include <sys/socket.h>
+// #include <sys/socket.h>
 #include <sys/types.h>
 #include <netinet/in.h>
 #include <unistd.h>

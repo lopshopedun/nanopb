@@ -2020,7 +2020,7 @@ def main_cli():
     for fdesc in fdescs.values():
         results = process_file(fdesc.name, fdesc, options, other_files)
 
-        base_dir = options.output_dir or ''
+        base_dir = options.output_dir or os.path.abspath(os.getcwd())
         to_write = [
             (os.path.join(base_dir, results['headername']), results['headerdata']),
             (os.path.join(base_dir, results['sourcename']), results['sourcedata']),

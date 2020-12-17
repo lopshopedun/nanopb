@@ -13,6 +13,7 @@ WINDOWS = 1
 endif
 ifdef WINDIR
 WINDOWS = 1
+WIN_NANOPB_DIR := $(subst /,\,$(NANOPB_DIR))
 endif
 
 # Check whether to use binary version of nanopb_generator or the
@@ -25,7 +26,7 @@ else
 	# Source only or git checkout
 	PROTOC_OPTS =
 	ifdef WINDOWS
-	    PROTOC = python $(NANOPB_DIR)/generator/protoc
+	    PROTOC = python $(WIN_NANOPB_DIR)\generator\protoc
 	else
 	    PROTOC = $(NANOPB_DIR)/generator/protoc
 	endif

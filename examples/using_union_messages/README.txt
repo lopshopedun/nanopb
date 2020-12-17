@@ -24,6 +24,9 @@ by nanopb. It might be a better option for new code.
 Example usage
 -------------
 
+protoc -ounionproto.pb unionproto.proto
+python ../../generator/nanopb_generator.py unionproto.pb
+
 Type `make` to run the example. It will build it and run commands like
 following:
 

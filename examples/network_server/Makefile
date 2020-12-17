@@ -4,6 +4,7 @@ include ../../extra/nanopb.mk
 # Compiler flags to enable all warnings & debug info
 CFLAGS = -ansi -Wall -Werror -g -O0
 CFLAGS += -I$(NANOPB_DIR)
+CC = gcc
 
 all: server client
 
